@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for battle in battles %}
+        <h3>{{battle.battle.id}}</h3>
+        {% for battler in battle.battlers %}
+            <p>{{battler.battler.full_name}}</p>
+            <p>{{battler.vote}}</p>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>
