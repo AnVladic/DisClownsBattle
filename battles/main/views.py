@@ -27,6 +27,6 @@ def set_vote_api(request):
         round_id = request.POST.get('round_id')
         battler_id = request.POST.get('battler_id')
         models.Vote(battle=models.Battle.objects.get(id=round_id), voter=request.user,
-                    battler=models.User.objects.get(id=battler_id))
+                    battler=models.User.objects.get(id=battler_id)).save()
         return HttpResponse('1')
     return HttpResponse('0')

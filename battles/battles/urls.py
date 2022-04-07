@@ -20,4 +20,6 @@ import main.views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', v.index),
+
+    path('api/set_vote', v.set_vote_api)
 ]
